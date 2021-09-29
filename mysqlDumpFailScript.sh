@@ -5,7 +5,7 @@ EMAIL_PASS=
 OUTPUT_FILE=backup.txt
 
 cat > $OUTPUT_FILE << EOF
-Subject: [ IMPORTATNT ALERT ] : UTEXAS DB Backup Script Failed!
+Subject: [ IMPORTATNT ALERT ] : <CLIENT_AND_ENV_NAME> DB Backup Script Failed!
 
 Hello Buid Team,
 
