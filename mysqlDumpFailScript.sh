@@ -29,6 +29,8 @@ EOF
 
 if [[ $DUMP_EXIT_CODE -ne 0 ]]
 then
-  curl --ssl-reqd --url 'smtps://smtp.gmail.com:465' -u $EMAIL_ID:$EMAIL_PASS --mail-from $EMAIL_ID --mail-rcpt '<EMAIL_ID_TO_RECIEVE_FAILED_EMAIL' --upload-file backup.txt
+  curl --ssl-reqd --url 'smtps://smtp.gmail.com:465' -u $EMAIL_ID:$EMAIL_PASS --mail-from $EMAIL_ID --mail-rcpt '<EMAIL_ID_TO_RECIEVE_FAILED_EMAIL>' --upload-file backup.txt
 fi
 rm backup.txt
+
+find /backup directory path/ -mtime +30 -exec rm {} \;
