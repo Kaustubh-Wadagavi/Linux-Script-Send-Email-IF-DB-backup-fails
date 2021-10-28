@@ -2,9 +2,9 @@
 
 mysql -uroot -psecrete os_mysql -e 'select 1'
 
-commandExitCode=$?
+COMMAND_EXIT_CODE=$?
 
-if [[ $commandExitCode -ne 0 ]]
+if [[ $COMMAND_EXIT_CODE -ne 0 ]]
 then
     sudo systemctl start mysql
     echo 'Starting MySQL'
